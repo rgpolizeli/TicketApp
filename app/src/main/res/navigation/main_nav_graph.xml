@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.rgp.ticketapp.LoginFragment"
+        android:name="com.rgp.ticketapp.view.fragment.LoginFragment"
         android:label="LoginFragment">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.rgp.ticketapp.SplashFragment"
+        android:name="com.rgp.ticketapp.view.fragment.SplashFragment"
         android:label="SplashFragment">
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
@@ -25,11 +25,11 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.rgp.ticketapp.RegisterFragment"
+        android:name="com.rgp.ticketapp.view.fragment.RegisterFragment"
         android:label="RegisterFragment" />
     <fragment
         android:id="@+id/ticketsFragment"
-        android:name="com.rgp.ticketapp.TicketsFragment"
+        android:name="com.rgp.ticketapp.view.fragment.TicketsFragment"
         android:label="TicketsFragment" />
     <action
         android:id="@+id/action_global_ticketsFragment"

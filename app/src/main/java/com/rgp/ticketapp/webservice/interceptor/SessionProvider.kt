@@ -1,4 +1,6 @@
-package com.rgp.ticketapp
+package com.rgp.ticketapp.webservice.interceptor
+
+import com.rgp.ticketapp.model.Session
 
 
 /**
@@ -12,7 +14,7 @@ object SessionProvider {
     }
 
     fun setSession(newSession: Session?) {
-        this.session = newSession
+        session = newSession
     }
 
 }

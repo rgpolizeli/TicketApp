@@ -1,4 +1,4 @@
-package com.rgp.ticketapp
+package com.rgp.ticketapp.webservice.interceptor
 
 import okhttp3.Interceptor
 
@@ -9,7 +9,8 @@ class AuthInterceptor() : Interceptor {
 
     val TOKEN_TYPE: String = "Bearer "
 
-    val tokenProvider: SessionProvider = SessionProvider
+    val tokenProvider: SessionProvider =
+        SessionProvider
 
     override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
         var request = chain.request()

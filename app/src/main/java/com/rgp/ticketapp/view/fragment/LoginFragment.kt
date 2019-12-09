@@ -1,4 +1,4 @@
-package com.rgp.ticketapp
+package com.rgp.ticketapp.view.fragment
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.rgp.ticketapp.R
 
 class LoginFragment : Fragment() {
 

@@ -1,5 +1,6 @@
-package com.rgp.ticketapp
+package com.rgp.ticketapp.webservice.api
 
+import com.rgp.ticketapp.model.Session
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST

@@ -1,5 +1,7 @@
-package com.rgp.ticketapp
+package com.rgp.ticketapp.webservice.webclient
 
+import com.rgp.ticketapp.webservice.api.AuthenticationAPI
+import com.rgp.ticketapp.webservice.interceptor.AuthInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -21,5 +23,7 @@ object WebServerClient {
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
 
-    val authenticationAPI: AuthenticationAPI = retrofit.create(AuthenticationAPI::class.java)
+    val authenticationAPI: AuthenticationAPI = retrofit.create(
+        AuthenticationAPI::class.java
+    )
 }

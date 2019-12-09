@@ -54,4 +54,7 @@ dependencies {
 
     //okhttp
     implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+
+    //SavedStateVM
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-rc03'
 }

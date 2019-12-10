@@ -31,6 +31,7 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //get authentication and register viewmodel.
         val mainActivity: MainActivity = activity!! as MainActivity
         val authenticationViewModel = ViewModelProvider(
             mainActivity,
@@ -55,7 +56,8 @@ class RegisterFragment : Fragment() {
                         authenticationViewModel.saveSession(it)
                         //navigate to Tickets Fragment
                         findNavController().navigate(R.id.action_global_ticketsFragment)
-                        //save credentials if checked option
+
+                        //todo: save credentials if checked option
                     }
                 })
         }

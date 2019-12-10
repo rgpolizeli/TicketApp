@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         configToolbar()
     }
 
+    /**
+     * Toolbar configuration.
+     */
     private fun configToolbar() {
         setSupportActionBar(findViewById(R.id.mainToolbar))
         val navController = findNavController(R.id.nav_host_fragment)

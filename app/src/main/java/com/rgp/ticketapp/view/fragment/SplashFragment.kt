@@ -27,7 +27,7 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //get authentication and login viewmodel.
+        //get authentication viewmodel.
         val mainActivity: MainActivity = activity!! as MainActivity
         val authenticationViewModel = ViewModelProvider(
             mainActivity,

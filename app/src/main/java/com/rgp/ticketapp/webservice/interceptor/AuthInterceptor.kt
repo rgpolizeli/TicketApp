@@ -20,6 +20,11 @@ class AuthInterceptor() : Interceptor {
     }
 
     private fun mountAuthorizationHeaderContent(): String {
-        return "$TOKEN_TYPE $(tokenProvider.getToken())"
+        val session = tokenProvider.getSession()
+        return if (session == null) {
+            "$TOKEN_TYPE "
+        } else {
+            "$TOKEN_TYPE ${session.token}"
+        }
     }
 }

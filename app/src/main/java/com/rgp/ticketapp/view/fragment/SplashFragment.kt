@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.SavedStateViewModelFactory
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -18,8 +17,6 @@ import com.rgp.ticketapp.viewmodel.SharedPreferencesManager
 
 class SplashFragment : Fragment() {
 
-    val authenticationViewModel: AuthenticationViewModel by activityViewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +27,7 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //get authentication and login viewmodel.
         val mainActivity: MainActivity = activity!! as MainActivity
         val authenticationViewModel = ViewModelProvider(
             mainActivity,
@@ -43,14 +41,11 @@ class SplashFragment : Fragment() {
                 findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
             } else {
                 authenticationViewModel.saveSession(session)
-                //navigate to Tickets Fragment
                 findNavController().navigate(R.id.action_global_ticketsFragment)
             }
         } else {
-            //navigate to Tickets Fragment
             findNavController().navigate(R.id.action_global_ticketsFragment)
         }
     }
-
 
 }

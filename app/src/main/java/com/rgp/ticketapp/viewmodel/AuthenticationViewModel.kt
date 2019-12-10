@@ -5,6 +5,9 @@ import androidx.lifecycle.ViewModel
 import com.rgp.ticketapp.model.Session
 import com.rgp.ticketapp.webservice.interceptor.SessionProvider
 
+/**
+ * Viewmodel to store the session, avoiding to load session from preferences at each screen rotation or process termination by the system.
+ */
 class AuthenticationViewModel(state: SavedStateHandle) : ViewModel() {
 
     companion object {

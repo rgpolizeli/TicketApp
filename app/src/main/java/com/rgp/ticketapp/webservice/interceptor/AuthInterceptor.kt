@@ -7,10 +7,7 @@ import okhttp3.Interceptor
  */
 class AuthInterceptor() : Interceptor {
 
-    val TOKEN_TYPE: String = "Bearer "
-
-    val tokenProvider: SessionProvider =
-        SessionProvider
+    val TOKEN_TYPE: String = "Bearer"
 
     override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
         var request = chain.request()
@@ -20,7 +17,7 @@ class AuthInterceptor() : Interceptor {
     }
 
     private fun mountAuthorizationHeaderContent(): String {
-        val session = tokenProvider.getSession()
+        val session = SessionProvider.getSession()
         return if (session == null) {
             "$TOKEN_TYPE "
         } else {

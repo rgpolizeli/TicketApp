@@ -18,6 +18,7 @@ class AuthenticationViewModel(state: SavedStateHandle) : ViewModel() {
     private val savedStateHandle = state
 
     fun saveSession(session: Session) {
+        SessionProvider.setSession(session)
         this.savedStateHandle.set(USERID_KEY, session.userId)
         this.savedStateHandle.set(TOKEN_KEY, session.token)
     }

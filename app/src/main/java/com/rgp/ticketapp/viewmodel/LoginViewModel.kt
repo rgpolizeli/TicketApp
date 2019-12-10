@@ -21,6 +21,7 @@ class LoginViewModel() : ViewModel() {
                     emit(fetchSession)
                 } catch (e: Exception) {
                     println(e.cause)
+                    //todo: emit login error
                 }
             }
         }

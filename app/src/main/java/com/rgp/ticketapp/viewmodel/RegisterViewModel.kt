@@ -26,9 +26,10 @@ class RegisterViewModel() : ViewModel() {
                     emit(fetchSession)
                 } catch (e: Exception) {
                     println(e.cause)
+                    //todo: emit register error
                 }
             } else {
-                //todo: emit result error
+                //todo: emit register validation error
             }
         }
     }
